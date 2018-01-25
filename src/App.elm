@@ -1,6 +1,30 @@
 module App exposing (main)
 
-import Html exposing (text)
+import Html exposing (div)
+import Markdown
+
 
 main =
-  text "Hello, World!"
+  div [] [
+    Markdown.toHtml [] markdown1,
+    Markdown.toHtml [] markdown2
+  ]
+
+
+markdown1 = """
+
+# This is Markdown 1
+
+ * item
+ * item
+ * item
+
+"""
+
+markdown2 = """
+
+# This is Markdown 2
+
+test
+
+"""
